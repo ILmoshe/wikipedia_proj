@@ -1,0 +1,18 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+Search
+{% endblock  %}
+
+{% block body %}
+{% if empty %}
+<h1>Thare wasn't any entry for your current search</h1>
+{% endif %}
+<ul>
+    {% for x in sub_str %}
+    <li><a href="/wiki/{{x}}">{{ x }}</a></li>
+    {% endfor %}
+</ul>
+
+    
+{% endblock %}
