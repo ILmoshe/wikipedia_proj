@@ -5,7 +5,8 @@
 {% endblock  %}
 
 {% block edit_page %}
-    <a href="/wiki/{{title}}/edit">Edit Page</a>
+    <a href="{% url 'enc:edit' title %}">Edit Page</a>
+    
 {% endblock edit_page %}
 
 {% block body %}

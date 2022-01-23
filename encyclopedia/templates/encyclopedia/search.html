@@ -6,11 +6,11 @@ Search
 
 {% block body %}
 {% if empty %}
-<h1>Thare wasn't any entry for your current search</h1>
+<h1 style="color:red">Thare wasn't any entry for your current search</h1>
 {% endif %}
 <ul>
     {% for x in sub_str %}
-    <li><a href="/wiki/{{x}}">{{ x }}</a></li>
+    <li><a href="{% url 'enc:entry' x %}">{{ x }}</a></li>
     {% endfor %}
 </ul>
 

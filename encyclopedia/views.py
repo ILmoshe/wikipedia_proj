@@ -108,5 +108,4 @@ def edit(request, entry_name):
 def random(request):
     lst = util.get_list_entries()
     random = lst[randint(0, len(lst) - 1)]
-
     return entry(request, random)

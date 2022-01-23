@@ -6,7 +6,8 @@ edit {{title}}
 
 {% block body %}
 <div>
-    <form action="/wiki/{{title}}/edit" method="POST">
+    <form action="{% url 'enc:edit' title %}" method="POST">
+        
         {% csrf_token %}
         {{text}}
         <input type="submit">

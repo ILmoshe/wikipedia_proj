@@ -7,7 +7,7 @@ Create Page
 {% block body %}
 
 <div>
-    <form action="/wiki/newpage/" method="POST">
+    <form action="{% url 'enc:newpage' %}" method="POST">
         {% csrf_token %}
         {{text}}
         <input type="submit">

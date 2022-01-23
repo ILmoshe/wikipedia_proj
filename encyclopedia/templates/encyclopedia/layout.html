@@ -23,16 +23,16 @@
           <input type='hidden'/ >
         </form>
         <div>
-          <a href="{% url 'index' %}">Home</a>
+          <a href="{% url 'enc:index' %}">Home</a>
         </div>
         <div>
-          <a href="/wiki/newpage">Create New Page</a>
+          <a href="{% url 'enc:newpage' %}">Create New Page</a>
         </div>
         <div>
           {% block edit_page %}{% endblock edit_page %}
         </div>
         <div>
-          <a href="/wiki/random">Random Page</a>
+          <a href="{% url 'enc:random' %}">Random Page</a>
           </div>
         {% block nav %} {% endblock %}
       </div>
